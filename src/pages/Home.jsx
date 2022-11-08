@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Header from "../components/Header/Header"
+import Carta from "../components/Cards/Carta"
+
 
 const Home = () => {
   const [items, setItems] = useState([]);
@@ -22,10 +24,16 @@ const Home = () => {
       });
   }, []);
 
+  
   return (
     <>
      
     <Header  />
+
+
+    
+    
+    
 
       <ul className="Home">
         {items.map((item) => {
