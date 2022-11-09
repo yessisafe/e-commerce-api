@@ -23,11 +23,10 @@ const Home = () => {
       });
   }, []);
   
-
+  
   return (
     <>
       
-
       <div className="App container">
         <div className="row">
           {items.map((item) => {

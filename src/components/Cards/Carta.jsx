@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import axios from "axios";
+import imagenVacio from "../../assets/camara.png"
+import './carta.scss'
+
 
 const Carta = ({ name, _id, src, description }) => {
   
@@ -9,9 +11,9 @@ const Carta = ({ name, _id, src, description }) => {
 
   return (
     <>
-      <div className="col-2">
+      <div className="col-3">
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={src} />
+          <Card.Img variant="top" src={src || imagenVacio } />
           <Card.Body>
             <Card.Title>{name}</Card.Title>
             <Card.Text>
