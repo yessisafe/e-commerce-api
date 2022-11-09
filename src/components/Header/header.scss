@@ -8,19 +8,18 @@ $color-font: #FFFFFF;
         background-color: $color;
         padding-top: 12px;
         padding-bottom: 12px;
+        .navbar-collapse{
+            .navbar-nav{
+                a.nav-link{
+                    color: $color-font;
+                }
+            }
+        }
         .navbar-brand {
             font-family: 'Righteous', cursive;
             font-size: 30px;
             color: $color-font;
-
-            .navbar-collapse {
-                .me-auto {
-                    a.nav-link{
-                        color: $color-font;
-                    }
-                }
-
-            }
         }
+
     }
 }
