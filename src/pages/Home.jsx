@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../components/Header/Header";
 import Carta from "../components/Cards/Carta";
 
 const Home = () => {
@@ -22,21 +21,22 @@ const Home = () => {
         console.log(error);
       });
   }, []);
-  
-  
+
   return (
     <>
-      
       <div className="App container">
         <div className="row">
           {items.map((item) => {
             return (
+              //En esta parte se ponen los datos de la Api que se usaran en las cards
               <Carta
                 id={item._id}
                 key={item._id}
                 src={item.image}
                 name={item.product_name}
-                description={item.description}
+                precio={item.price}
+                marca={item.brand}
+                categoria={item.category}
               ></Carta>
             );
           })}
